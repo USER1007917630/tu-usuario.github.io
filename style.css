@@ -1,16 +1,9 @@
-/* =========================
-   FONT
-========================= */
 @font-face {
   font-family: 'Amasis';
   src: url('fonts/Amasis MT Std Light.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
 }
 
-/* =========================
-   GLOBAL
-========================= */
+/* GLOBAL */
 * {
   box-sizing: border-box;
 }
@@ -22,9 +15,7 @@ body {
   color: #F2AD94;
 }
 
-/* =========================
-   HERO / HEADER
-========================= */
+/* HERO */
 .hero {
   background-color: #012626;
   text-align: center;
@@ -32,127 +23,96 @@ body {
 }
 
 .hero h1 {
+  font-size: 58px;
   margin: 0;
-  font-size: 58px;        /* NOMBRE MÁS GRANDE */
   color: #F2AD94;
-  letter-spacing: 1px;
 }
 
 .hero p {
   margin-top: 16px;
-  font-size: 28px;        /* DATA SPECIALIST MÁS GRANDE */
+  font-size: 28px;
   color: #BF532C;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
+/* ABOUT */
 .about {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 80px;
   padding: 100px 60px;
 }
 
-/* PHOTO */
 .about-photo img {
   width: 260px;
   border-radius: 16px;
-  border: 3px solid #BF532C;   /* NARANJA */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 3px solid #BF532C;
 }
 
-/* TEXT */
 .about-text {
   max-width: 520px;
 }
 
 .about-text h2 {
-  margin-top: 0;
-  margin-bottom: 24px;
   font-size: 34px;
   color: #BF532C;
 }
 
 .about-text p {
-  font-size: 16px;
   line-height: 1.9;
-  color: #F2AD94;
-  text-align: justify;        /* TEXTO JUSTIFICADO */
-  margin-bottom: 20px;
+  text-align: justify;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text p {
-    text-align: justify;
-  }
-}
-
-/* =========================
-   TOOLS SECTION
-========================= */
+/* TOOLS */
 .tools-section {
-  padding: 120px 60px;
+  padding: 60px 60px;
   text-align: center;
 }
 
 .tools-title {
   font-size: 36px;
   color: #BF532C;
-  margin-bottom: 60px;
-  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
-/* GRID */
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 40px;
+  gap: 24px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* TOOL CARD */
 .tool {
   background-color: rgba(1, 38, 38, 0.6);
   border: 1px solid #BF532C;
   border-radius: 16px;
-  padding: 30px 20px;
-  font-size: 40px;
+  padding: 22px 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  color: #F2AD94;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* TOOL TEXT */
-.tool span {
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-/* HOVER */
 .tool:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(191, 83, 44, 0.4);
 }
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+.tool span {
+  font-size: 14px;
+}
+
+.tool-icon {
+  width: 46px;
+  height: 46px;
+  fill: #BF532C;
+}
+
+/* SCROLL REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -164,14 +124,10 @@ body {
   transition: all 0.8s ease;
 }
 
-.tool-icon {
-  width: 46px;
-  height: 46px;
-  fill: #BF532C;
-  transition: transform 0.3s ease;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-
-.tool:hover .tool-icon {
-  transform: scale(1.1);
-}
-
