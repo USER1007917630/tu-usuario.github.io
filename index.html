@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laura Gabriela Parra Beltran | Data Specialist</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,20 +13,20 @@
        HERO
   ========================== -->
   <header class="hero">
-    <h1 class="fade-up glow">Laura Gabriela Parra Beltran</h1>
+    <h1 class="fade-up">Laura Gabriela Parra Beltran</h1>
     <p class="typing">Data Specialist</p>
   </header>
 
   <!-- =========================
-       ABOUT ME
+       ABOUT
   ========================== -->
   <section class="about">
 
-    <div class="about-photo">
-      <img src="foto.jpg" alt="Profile photo of Laura Gabriela Parra Beltran">
+    <div class="about-photo fade-up">
+      <img src="foto.jpg" alt="Profile photo">
     </div>
 
-    <div class="about-text">
+    <div class="about-text fade-up">
       <h2>About Me</h2>
 
       <p>
@@ -37,7 +37,7 @@
       </p>
 
       <p>
-        Additionally, I hold a modular diploma in Machine Learning 🤖 and
+        🤖 Additionally, I hold a modular diploma in Machine Learning and
         Data Science, focused on transforming data into clear, efficient,
         and actionable insights that support strategic decision-making.
       </p>
@@ -54,49 +54,49 @@
     <div class="tools-grid reveal">
 
       <div class="tool">
-        <span class="icon">X</span>
+        <svg viewBox="0 0 24 24" class="tool-icon">
+          <path d="M4 3h10l6 6v12H4z"/>
+          <text x="9" y="16" font-size="8">X</text>
+        </svg>
         <span>Excel</span>
       </div>
 
       <div class="tool">
-        <span class="icon">▮▮▮</span>
+        <svg viewBox="0 0 24 24" class="tool-icon">
+          <rect x="4" y="10" width="3" height="8"/>
+          <rect x="10" y="6" width="3" height="12"/>
+          <rect x="16" y="3" width="3" height="15"/>
+        </svg>
         <span>Power BI</span>
       </div>
 
       <div class="tool">
-        <span class="icon">●</span>
+        <svg viewBox="0 0 24 24" class="tool-icon">
+          <path d="M12 2c-4 0-4 4-4 4v4h8V6s0-4-4-4z"/>
+          <path d="M12 22c4 0 4-4 4-4v-4h-8v4s0 4 4 4z"/>
+        </svg>
         <span>Python</span>
       </div>
 
       <div class="tool">
-        <span class="icon">■</span>
+        <svg viewBox="0 0 24 24" class="tool-icon">
+          <path d="M4 4h10v10H4z"/>
+          <path d="M14 10l6 6"/>
+        </svg>
         <span>Power Query</span>
       </div>
 
       <div class="tool">
-        <span class="icon">⬤</span>
+        <svg viewBox="0 0 24 24" class="tool-icon">
+          <ellipse cx="12" cy="5" rx="8" ry="3"/>
+          <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/>
+        </svg>
         <span>SQL</span>
       </div>
 
     </div>
   </section>
 
-  <!-- =========================
-       SCRIPT
-  ========================== -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, { threshold: 0.2 });
-
-    reveals.forEach(r => observer.observe(r));
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
