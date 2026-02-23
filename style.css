@@ -98,3 +98,69 @@ body {
     text-align: justify;
   }
 }
+
+/* =========================
+   TOOLS SECTION
+========================= */
+.tools-section {
+  padding: 120px 60px;
+  text-align: center;
+}
+
+.tools-title {
+  font-size: 36px;
+  color: #BF532C;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+/* GRID */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* TOOL CARD */
+.tool {
+  background-color: rgba(1, 38, 38, 0.6);
+  border: 1px solid #BF532C;
+  border-radius: 16px;
+  padding: 30px 20px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #F2AD94;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* TOOL TEXT */
+.tool span {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* HOVER */
+.tool:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(191, 83, 44, 0.4);
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
