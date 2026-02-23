@@ -9,41 +9,42 @@
 /* =========================
    GLOBAL
 ========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Amasis', serif;
-  background: #0D0D0D;
-  color: #F2AD94;
-}
-
-* {
-  box-sizing: border-box;
+  background: #73221A;
+  color: #D9A7B9;
 }
 
 /* =========================
    HERO
 ========================= */
 .hero {
-  background: #012626;
+  background: #A62D2D;
   text-align: center;
   padding: 90px 20px;
 }
 
 .hero-name {
-  font-size: 58px;
   margin: 0;
+  font-size: 56px;
+  color: #D9A7B9;
 }
 
 .hero-role {
   margin-top: 16px;
-  font-size: 28px;
-  color: #BF532C;
+  font-size: 26px;
   letter-spacing: 3px;
   text-transform: uppercase;
+  color: #D99982;
 }
 
 /* =========================
-   FADE ANIMATION
+   FADE UP ANIMATION
 ========================= */
 .fade-up {
   opacity: 0;
@@ -51,7 +52,9 @@ body {
   animation: fadeUp 1s ease forwards;
 }
 
-.delay-1 { animation-delay: 0.3s; }
+.delay-1 {
+  animation-delay: 0.3s;
+}
 
 @keyframes fadeUp {
   to {
@@ -65,16 +68,16 @@ body {
 ========================= */
 .about {
   display: flex;
-  gap: 70px;
-  padding: 80px 80px 60px;
+  gap: 60px;
+  padding: 80px;
   align-items: flex-start;
 }
 
-/* IMAGE */
+/* PHOTO */
 .about-photo img {
   width: 260px;
-  border-radius: 18px;
-  border: 3px solid #BF532C;
+  border-radius: 20px;
+  border: 3px solid #D99982;
 }
 
 /* CONTENT */
@@ -82,9 +85,10 @@ body {
   flex: 1;
 }
 
+/* TEXT */
 .about-text h2 {
   font-size: 34px;
-  color: #BF532C;
+  color: #D99982;
   margin-bottom: 20px;
 }
 
@@ -92,10 +96,11 @@ body {
   line-height: 1.9;
   text-align: justify;
   margin-bottom: 18px;
+  color: #D9A7B9;
 }
 
 /* =========================
-   TOOLS INLINE
+   TOOLS
 ========================= */
 .tools-block {
   margin-top: 40px;
@@ -103,25 +108,24 @@ body {
 
 .tools-inline-title {
   font-size: 28px;
-  color: #BF532C;
+  color: #D99982;
   margin-bottom: 20px;
-  text-align: left;
 }
 
-/* ICON ROW */
+/* ROW */
 .tools-row {
   display: flex;
-  gap: 28px;
+  gap: 24px;
   flex-wrap: nowrap;
 }
 
-/* TOOL CARD */
+/* CARD */
 .tool {
   width: 140px;
   height: 140px;
-  background: rgba(1, 38, 38, 0.6);
-  border: 1px solid #BF532C;
-  border-radius: 18px;
+  background: #A62D2D;
+  border: 1px solid #D99982;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,19 +136,21 @@ body {
 
 .tool span {
   font-size: 14px;
+  color: #D9D9D9;
 }
 
 /* ICON */
 .tool-icon {
-  width: 52px;
-  height: 52px;
-  fill: #BF532C;
+  width: 54px;
+  height: 54px;
+  fill: #D9D9D9;
+  stroke: #D9D9D9;
 }
 
 /* HOVER */
 .tool:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(191, 83, 44, 0.4);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* =========================
