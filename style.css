@@ -1,68 +1,100 @@
-/* RESET BÁSICO */
+/* =========================
+   FONT
+========================= */
+@font-face {
+  font-family: 'Amasis';
+  src: url('fonts/Amasis MT Std Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Amasis', serif;
   background-color: #0D0D0D;
   color: #F2AD94;
 }
 
-/* HEADER */
-header {
+/* =========================
+   HERO / HEADER
+========================= */
+.hero {
   background-color: #012626;
-  padding: 90px 20px;
   text-align: center;
+  padding: 80px 20px;
 }
 
-header h1 {
-  font-size: 42px;
+.hero h1 {
   margin: 0;
+  font-size: 58px;        /* NOMBRE MÁS GRANDE */
   color: #F2AD94;
+  letter-spacing: 1px;
 }
 
-header p {
-  margin-top: 10px;
-  font-size: 18px;
+.hero p {
+  margin-top: 16px;
+  font-size: 28px;        /* DATA SPECIALIST MÁS GRANDE */
   color: #BF532C;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-/* ABOUT SECTION */
+/* =========================
+   ABOUT SECTION
+========================= */
 .about {
-  max-width: 1000px;
-  margin: 80px auto;
-  padding: 0 20px;
   display: flex;
-  gap: 60px;
   align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 60px;
 }
 
+/* PHOTO */
 .about-photo img {
   width: 260px;
-  border-radius: 12px;
-  border: 3px solid #731702;
+  border-radius: 16px;
+  border: 3px solid #BF532C;   /* NARANJA */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* TEXT */
+.about-text {
+  max-width: 520px;
+}
+
 .about-text h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 34px;
   color: #BF532C;
 }
 
 .about-text p {
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.9;
   color: #F2AD94;
-  max-width: 520px;
+  text-align: justify;        /* TEXTO JUSTIFICADO */
+  margin-bottom: 20px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
   .about {
     flex-direction: column;
     text-align: center;
   }
 
   .about-text p {
-    max-width: 100%;
+    text-align: justify;
   }
 }
