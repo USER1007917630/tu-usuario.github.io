@@ -1,12 +1,68 @@
+/* RESET BÁSICO */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #0D0D0D;
+  color: #F2AD94;
 }
 
+/* HEADER */
 header {
-  background-color: #1e293b;
-  color: white;
-  padding: 30px;
+  background-color: #012626;
+  padding: 90px 20px;
   text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  margin: 0;
+  color: #F2AD94;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #BF532C;
+}
+
+/* ABOUT SECTION */
+.about {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-photo img {
+  width: 260px;
+  border-radius: 12px;
+  border: 3px solid #731702;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.about-text h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #BF532C;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #F2AD94;
+  max-width: 520px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
 }
