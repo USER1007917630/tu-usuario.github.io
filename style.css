@@ -1,14 +1,8 @@
-/* =========================
-   FONT
-========================= */
 @font-face {
   font-family: 'Amasis';
   src: url('fonts/Amasis MT Std Light.otf') format('opentype');
 }
 
-/* =========================
-   GLOBAL
-========================= */
 * {
   box-sizing: border-box;
 }
@@ -20,38 +14,55 @@ body {
   color: #F2AD94;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ================= HERO ================= */
 .hero {
   background-color: #012626;
+  padding: 90px 20px;
   text-align: center;
-  padding: 70px 20px;
 }
 
 .hero h1 {
   font-size: 56px;
   margin: 0;
   color: #F2AD94;
+  text-shadow: 0 0 20px rgba(242,173,148,0.3);
 }
 
 .hero p {
-  margin-top: 14px;
-  font-size: 26px;
+  margin-top: 18px;
+  font-size: 30px;
   color: #BF532C;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+}
+
+/* Typing effect */
+.typing {
+  width: 14ch;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #BF532C;
+  animation: typing 3s steps(14), blink 0.6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 /* Fade up */
 .fade-up {
-  animation: fadeUp 1.2s ease forwards;
+  animation: fadeUp 1s ease forwards;
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -59,43 +70,18 @@ body {
   }
 }
 
-/* Glow hover */
-.glow:hover {
-  text-shadow: 0 0 20px rgba(242,173,148,0.6);
-  transition: 0.3s;
-}
-
-/* Typing effect */
-.typing {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid #BF532C;
-  width: 0;
-  animation: typing 2.5s steps(20) forwards, blink 0.7s infinite;
-}
-
-@keyframes typing {
-  to { width: 220px; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* =========================
-   ABOUT
-========================= */
+/* ================= ABOUT ================= */
 .about {
   display: flex;
-  gap: 60px;
-  padding: 70px 60px 40px; /* ⬅ espacio negro reducido */
+  gap: 80px;
+  padding: 90px 60px 60px;
   justify-content: center;
   align-items: center;
 }
 
 .about-photo img {
-  width: 250px;
-  border-radius: 18px;
+  width: 260px;
+  border-radius: 16px;
   border: 3px solid #BF532C;
 }
 
@@ -110,29 +96,27 @@ body {
 
 .about-text p {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.9;
   text-align: justify;
 }
 
-/* =========================
-   TOOLS
-========================= */
+/* ================= TOOLS ================= */
 .tools-section {
-  padding: 40px 60px 80px; /* ⬅ MUCHO más compacto */
+  padding: 70px 60px 90px;
   text-align: center;
 }
 
 .tools-title {
   font-size: 34px;
   color: #BF532C;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px; /* ⬅ más cerca */
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -140,52 +124,42 @@ body {
   background-color: rgba(1,38,38,0.7);
   border: 1px solid #BF532C;
   border-radius: 16px;
-  padding: 22px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  transition: 0.3s;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
 }
 
 .tool:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(191,83,44,0.4);
+  box-shadow: 0 20px 40px rgba(191,83,44,0.4);
 }
 
-.icon {
-  font-size: 28px;
-  color: #BF532C;
+.tool-icon {
+  width: 64px;
+  height: 64px;
+  fill: #BF532C;
+  margin-bottom: 12px;
 }
 
 .tool span {
-  font-size: 14px;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+/* Scroll reveal */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-  transition: 0.8s ease;
+  transition: 0.9s ease;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive */
 @media (max-width: 900px) {
   .about {
     flex-direction: column;
-    text-align: center;
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
