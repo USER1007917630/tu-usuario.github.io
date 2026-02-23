@@ -1,8 +1,14 @@
+/* =========================
+   FONT
+========================= */
 @font-face {
   font-family: 'Amasis';
   src: url('fonts/Amasis MT Std Light.otf') format('opentype');
 }
 
+/* =========================
+   GLOBAL
+========================= */
 * {
   box-sizing: border-box;
 }
@@ -14,69 +20,58 @@ body {
   color: #F2AD94;
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 .hero {
   background-color: #012626;
-  padding: 90px 20px;
   text-align: center;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 58px;
   margin: 0;
   color: #F2AD94;
-  text-shadow: 0 0 20px rgba(242,173,148,0.3);
 }
 
 .hero p {
-  margin-top: 18px;
-  font-size: 30px;
+  margin-top: 16px;
+  font-size: 28px;
   color: #BF532C;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
 
-/* Typing effect */
-.typing {
-  width: 14ch;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #BF532C;
-  animation: typing 3s steps(14), blink 0.6s infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-/* Fade up */
+/* =========================
+   FADE UP ANIMATION
+========================= */
 .fade-up {
+  opacity: 0;
+  transform: translateY(30px);
   animation: fadeUp 1s ease forwards;
 }
 
+.fade-up.delay {
+  animation-delay: 0.3s;
+}
+
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* ================= ABOUT ================= */
+/* =========================
+   ABOUT
+========================= */
 .about {
   display: flex;
-  gap: 80px;
-  padding: 90px 60px 60px;
+  gap: 70px;
   justify-content: center;
   align-items: center;
+  padding: 90px 60px 60px; /* menos espacio abajo */
 }
 
 .about-photo img {
@@ -95,49 +90,42 @@ body {
 }
 
 .about-text p {
-  font-size: 16px;
   line-height: 1.9;
   text-align: justify;
 }
 
-/* ================= TOOLS ================= */
+/* =========================
+   TOOLS
+========================= */
 .tools-section {
-  padding: 70px 60px 90px;
+  padding: 60px 60px 100px; /* menos espacio arriba */
   text-align: center;
 }
 
 .tools-title {
-  font-size: 34px;
+  font-size: 36px;
   color: #BF532C;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
-  max-width: 800px;
-  margin: auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .tool {
-  background-color: rgba(1,38,38,0.7);
+  background-color: rgba(1, 38, 38, 0.7);
   border: 1px solid #BF532C;
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 30px 20px;
-  transition: all 0.3s ease;
-}
-
-.tool:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(191,83,44,0.4);
-}
-
-.tool-icon {
-  width: 64px;
-  height: 64px;
-  fill: #BF532C;
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tool span {
@@ -145,7 +133,20 @@ body {
   letter-spacing: 1px;
 }
 
-/* Scroll reveal */
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  fill: #BF532C;
+}
+
+.tool:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(191, 83, 44, 0.4);
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -154,12 +155,18 @@ body {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
-  transition: 0.9s ease;
+  transition: all 0.8s ease;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .about {
     flex-direction: column;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
