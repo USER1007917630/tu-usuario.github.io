@@ -1,107 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laura Gabriela Parra Beltran | Data Specialist</title>
+/* =========================
+   FONT
+========================= */
+@font-face {
+  font-family: 'Amasis';
+  src: url('fonts/Amasis MT Std Light.otf') format('opentype');
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: 'Amasis', serif;
+  background: #0D0D0D;
+  color: #F2AD94;
+}
 
-  <!-- =========================
-       HERO
-  ========================== -->
-  <header class="hero">
-    <h1 class="hero-name fade-up">Laura Gabriela Parra Beltran</h1>
-    <p class="hero-role fade-up delay-1">Data Specialist</p>
-  </header>
+* {
+  box-sizing: border-box;
+}
 
-  <!-- =========================
-       ABOUT + TOOLS
-  ========================== -->
-  <section class="about">
+/* =========================
+   HERO
+========================= */
+.hero {
+  background: #012626;
+  text-align: center;
+  padding: 90px 20px;
+}
 
-    <!-- IMAGE -->
-    <div class="about-photo">
-      <img src="foto.jpg" alt="Laura Gabriela Parra Beltran">
-    </div>
+.hero-name {
+  font-size: 58px;
+  margin: 0;
+}
 
-    <!-- TEXT -->
-    <div class="about-content">
+.hero-role {
+  margin-top: 16px;
+  font-size: 28px;
+  color: #BF532C;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
-      <div class="about-text">
-        <h2>About Me</h2>
+/* =========================
+   FADE ANIMATION
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
 
-        <p>
-          📊 <strong>Data Analyst</strong> with a Bachelor’s degree in
-    <strong>Business Administration</strong> and a postgraduate degree in
-    <strong>Business Analytics</strong>. I specialize in data analysis,
-    data science, and the use of visualization tools to support
-    data-driven decision-making.
-        </p>
+.delay-1 { animation-delay: 0.3s; }
 
-        <p>
-         Additionally, I hold a modular diploma in
-    <strong>Machine Learning 🤖 and Data Science</strong>, focused on
-    transforming complex data into clear, efficient, and actionable
-    insights that generate real business value.
-        </p>
-      </div>
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      <!-- TOOLS -->
-      <div class="tools-block">
-        <h3 class="tools-inline-title">Tools</h3>
+/* =========================
+   ABOUT
+========================= */
+.about {
+  display: flex;
+  gap: 70px;
+  padding: 80px 80px 60px;
+  align-items: flex-start;
+}
 
-        <div class="tools-row reveal">
+/* IMAGE */
+.about-photo img {
+  width: 260px;
+  border-radius: 18px;
+  border: 3px solid #BF532C;
+}
 
-          <div class="tool">
-            <svg viewBox="0 0 24 24" class="tool-icon">
-              <path d="M4 3h10l6 6v12H4z"/>
-            </svg>
-            <span>Excel</span>
-          </div>
+/* CONTENT */
+.about-content {
+  flex: 1;
+}
 
-          <div class="tool">
-            <svg viewBox="0 0 24 24" class="tool-icon">
-              <rect x="4" y="10" width="3" height="8"/>
-              <rect x="10" y="6" width="3" height="12"/>
-              <rect x="16" y="3" width="3" height="15"/>
-            </svg>
-            <span>Power BI</span>
-          </div>
+.about-text h2 {
+  font-size: 34px;
+  color: #BF532C;
+  margin-bottom: 20px;
+}
 
-          <div class="tool">
-            <svg viewBox="0 0 24 24" class="tool-icon">
-              <path d="M12 2c-4 0-4 4-4 4v4h8V6s0-4-4-4z"/>
-              <path d="M12 22c4 0 4-4 4-4v-4h-8v4s0 4 4 4z"/>
-            </svg>
-            <span>Python</span>
-          </div>
+.about-text p {
+  line-height: 1.9;
+  text-align: justify;
+  margin-bottom: 18px;
+}
 
-          <div class="tool">
-            <svg viewBox="0 0 24 24" class="tool-icon">
-              <path d="M4 4h10v10H4z"/>
-            </svg>
-            <span>Power Query</span>
-          </div>
+/* =========================
+   TOOLS INLINE
+========================= */
+.tools-block {
+  margin-top: 40px;
+}
 
-          <div class="tool">
-            <svg viewBox="0 0 24 24" class="tool-icon">
-              <ellipse cx="12" cy="5" rx="8" ry="3"/>
-              <path d="M4 5v14"/>
-              <path d="M20 5v14"/>
-            </svg>
-            <span>SQL</span>
-          </div>
+.tools-inline-title {
+  font-size: 28px;
+  color: #BF532C;
+  margin-bottom: 20px;
+  text-align: left;
+}
 
-        </div>
-      </div>
+/* ICON ROW */
+.tools-row {
+  display: flex;
+  gap: 28px;
+  flex-wrap: nowrap;
+}
 
-    </div>
-  </section>
+/* TOOL CARD */
+.tool {
+  width: 140px;
+  height: 140px;
+  background: rgba(1, 38, 38, 0.6);
+  border: 1px solid #BF532C;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+.tool span {
+  font-size: 14px;
+}
 
+/* ICON */
+.tool-icon {
+  width: 52px;
+  height: 52px;
+  fill: #BF532C;
+}
+
+/* HOVER */
+.tool:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(191, 83, 44, 0.4);
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tools-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tools-inline-title {
+    text-align: center;
+  }
+}
