@@ -164,3 +164,14 @@ body {
   transition: all 0.8s ease;
 }
 
+.tool-icon {
+  width: 46px;
+  height: 46px;
+  fill: #BF532C;
+  transition: transform 0.3s ease;
+}
+
+.tool:hover .tool-icon {
+  transform: scale(1.1);
+}
+
