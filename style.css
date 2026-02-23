@@ -9,58 +9,56 @@
 /* =========================
    GLOBAL
 ========================= */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: 'Amasis', serif;
-  background: linear-gradient(180deg, #020659, #031059);
+  background: #020659;
   color: #F2C6A0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* =========================
    HERO
 ========================= */
 .hero {
-  padding: 90px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-box {
-  border: 2px solid #F2AFA0;
-  padding: 40px 70px;
+  background: linear-gradient(180deg, #020659, #031059);
   text-align: center;
+  padding: 100px 20px 90px;
 }
 
-.hero h1 {
+.hero-name {
   font-size: 56px;
   margin: 0;
 }
 
 .hero-divider {
-  width: 60px;
+  width: 90px;
   height: 2px;
   background: #F2AFA0;
-  margin: 20px auto;
+  margin: 22px auto;
 }
 
-.hero p {
-  font-size: 26px;
-  letter-spacing: 3px;
+.hero-role {
+  font-size: 24px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  margin: 0;
+  color: #F2AFA0;
 }
 
 /* =========================
-   FADE UP
+   FADE ANIMATION
 ========================= */
 .fade-up {
   opacity: 0;
-  transform: translateY(25px);
+  transform: translateY(30px);
   animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeUp {
@@ -71,82 +69,103 @@ body {
 }
 
 /* =========================
+   ABOUT WRAPPER (CARD)
+========================= */
+.about-wrapper {
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  padding: 70px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 34px;
+  border: 1px solid rgba(242, 198, 160, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+/* =========================
    ABOUT
 ========================= */
 .about {
   display: flex;
-  gap: 70px;
-  padding: 80px;
+  gap: 60px;
   align-items: flex-start;
 }
 
-/* PHOTO */
+/* IMAGE */
 .about-photo img {
-  width: 260px;
-  border-radius: 18px;
-  border: 2px solid #F2AFA0;
+  width: 280px;
+  border-radius: 22px;
+  border: 3px solid #F2AFA0;
 }
 
 /* CONTENT */
 .about-content {
-  max-width: 700px;
+  flex: 1;
 }
 
-.about-content h2 {
+/* TEXT */
+.about-text h2 {
   font-size: 34px;
   margin-bottom: 20px;
+  color: #F2AFA0;
 }
 
-.about-content p {
+.about-text p {
   line-height: 1.9;
   margin-bottom: 18px;
-  text-align: justify;
+  color: #F2C6A0;
 }
 
 /* =========================
    TOOLS
 ========================= */
-.tools-title {
+.tools-block {
   margin-top: 40px;
-  font-size: 28px;
 }
 
+.tools-inline-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #F2AFA0;
+}
+
+/* ICON ROW */
 .tools-row {
   display: flex;
   gap: 26px;
-  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 /* TOOL CARD */
 .tool {
   width: 140px;
   height: 140px;
-  border: 1.5px solid #F2AFA0;
+  background: rgba(3, 16, 89, 0.6);
+  border: 1px solid #F2AFA0;
   border-radius: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tool span {
   font-size: 14px;
+  color: #F2C6A0;
 }
 
 /* ICON */
 .tool-icon {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   fill: #F2AFA0;
-  stroke: #F2AFA0;
 }
 
 /* HOVER */
 .tool:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(242, 175, 160, 0.35);
+  box-shadow: 0 18px 40px rgba(242, 175, 160, 0.35);
 }
 
 /* =========================
@@ -158,8 +177,11 @@ body {
     align-items: center;
   }
 
+  .about-photo img {
+    width: 240px;
+  }
+
   .tools-row {
-    flex-wrap: wrap;
     justify-content: center;
   }
 }
